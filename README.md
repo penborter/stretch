@@ -39,7 +39,7 @@ Variations of these two colours are then derived and used throughout the site. I
 
 ### List.html
 
-You can choose how to display your collections using the [`list.html`]() layout. This layout has three versions, depending on the front matter you include in your page. See the template's [books](http://stretch.penborter.com/books), [posts](http://stretch.penborter.com/posts), and [projects](http://stretch.penborter.com/projects) pages for examples of the three layouts.
+You can choose how to display your collections using the [`list.html`](https://github.com/penborter/stretch/blob/main/_layouts/list.html) layout. This layout has three versions, depending on the front matter you include in your page. See the template's [books](http://stretch.penborter.com/books), [posts](http://stretch.penborter.com/posts), and [projects](http://stretch.penborter.com/projects) pages for examples of the three layouts.
 
 1. A plain list of collection items - set `layout: list` with no other changes required. *E.g.: [Books](http://stretch.penborter.com/books)*
 2. A list of collection items separated by year - `layout: list` and `by_date: true` in the front matter. *E.g.: [Posts](http://stretch.penborter.com/posts)*
