@@ -1,0 +1,101 @@
+# 1. Site Details
+site: Stretch
+url: https://stretch.ben.report
+title: Stretch
+description: "A simple, flexible Jekyll theme."
+
+
+# 2. Excluded files
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - stretch.gemspec
+  - .jekyll-cache
+
+# 3. Gems / Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# 4. Gem settings
+twitter:
+  username: penborter
+author: Ben Porter
+social:
+  name: Ben Porter
+  links:
+    - https://twitter.com/penborter
+    - https://www.linkedin.com/in/penborter
+markdown: kramdown
+
+# 5. Jekyll settings
+sass:
+  style: compressed
+timezone: Australia/Sydney #AEST FTW
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: "/assets/default-social-image.png" # Default image for sharing
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post # Set the default layout for posts
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page # Set the default layout for pages
+
+encoding: utf-8 
+lang: en-GB
+
+# 6. Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /posts/:slug
+  projects:
+    output: true
+    permalink: /projects/:slug
+    label: "Projects"
+  reviews:
+    output: true
+    permalink: /books/:slug
+
+# 7. Site Navigation
+nav_header:
+- title: Posts
+  url: /posts
+- title: Projects
+  url: /projects
+- title: Books
+  url: /books
+
+nav_secondary:
+- title: Tags
+  url: /tags
+- title: Twitter
+  url: https://twitter.com/penborter
+- title: Github
+  url: https://github.com/penborter
+
+nav_footer:
+- title: Stretch theme, created by Ben Porter
+  url: https://ben.report
+
+sharing_links: #Value can be 'true' or the desired button colour
+  Twitter: "#0d94e7"
+  facebook: "#3B5998"
+  Email: true

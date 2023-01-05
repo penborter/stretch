@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body {% if page.url contains "/photos" %} class="dark"{% endif %}>
+
+    <main id="main" role="main">
+
+      {{ content }}
+
+      {% include footer.html %}
+
+    </main>
+  </body>
+</html>
+
+
+

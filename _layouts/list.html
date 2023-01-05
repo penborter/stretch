@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+{% assign item_class = "list-item" %}
+{% if page.card == true %}
+  {% assign item_class = "card" %}
+{% endif %}
+
+{% include navigation.html %}
+
+<article>
+  <h1>{{ page.display_collection | capitalize }}</h1>
+
+    {{ content }}
+
+    {% unless page.by_date == true %}
+      <div class="list-cat-container{% unless page.card == true %} border-top{% endunless %}">
+        <ul {% if page.card == true %}class="card-collection"{% endif %}>
+    {% endunless %}
+
+    {% for item in site[page.display_collection] %}
+
+      {% if page.by_date == true %}
+
+        {% assign currentdate = item.date | date: "%Y" %}
+
+        {% if currentdate != date %}
+          {% unless forloop.first %}</div>{% endunless %}
+            
+            <a href="#{{ currentdate }}" class="list-cat-link">
+              <span id="{{ currentdate }}" class="list-cat top-u1">{{ currentdate }}</span>
+            </a>
+
+            <div class="list-cat-container border-top top-u2">
+              <ul>
+
+                {% assign date = currentdate %}
+        
+        {% endif %}
+      {% endif %}
+                {% if page.card == true %}
+
+                  <a class="list-link" href="{{ item.url }}">
+                    <li class="{{ item_class }} truncate">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                  </a>
+                
+                {% else %}
+      
+                  <li class="{{ item_class }} truncate">
+                    <a class="list-link" href="{{ item.url }}">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+                  </li>
+
+                {% endif %}
+    
+          {% if forloop.last %}
+              </ul>
+            </div>
+          {% endif %}
+    
+    {% endfor %}
+
+    {% unless page.by_date == true %}
+      </div>
+      </ul>
+    {% endunless %}
+
+</article>

@@ -1,0 +1,6 @@
+@import "fonts";
+@import "layout";
+
+{% if page.url contains "/photos" %} 
+  @import "photos";
+{% endif %}

@@ -1,0 +1,23 @@
+<nav role="navigation" {% if page.url contains "/photos" %} id="dark-nav"{% endif %}>
+
+  <a class="card upper" href="/">Stretch</a>
+
+  <ul class="nav-main">
+    {% for item in site.nav_header %}
+      <li class="block{% if page.url contains item.url %} active{% endif %}">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if site.nav_secondary %}
+  <ul class="nav-secondary">
+    {% for item in site.nav_secondary %}
+      <li class="block">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</nav>
