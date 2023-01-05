@@ -1,13 +1,12 @@
 # 1. Site Details
 site: Stretch
-url: https://stretch.ben.report
-title: Stretch
+url: https://www.penborter.com
+title: Stretch theme
 description: "A simple, flexible Jekyll theme."
 
 
 # 2. Excluded files
 exclude:
-  - README.md
   - LICENSE
   - CNAME
   - Gemfile
@@ -19,6 +18,7 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-target-blank
 
 # 4. Gem settings
 twitter:
@@ -89,13 +89,4 @@ nav_secondary:
 - title: Twitter
   url: https://twitter.com/penborter
 - title: Github
-  url: https://github.com/penborter
-
-nav_footer:
-- title: Stretch theme, created by Ben Porter
-  url: https://ben.report
-
-sharing_links: #Value can be 'true' or the desired button colour
-  Twitter: "#0d94e7"
-  facebook: "#3B5998"
-  Email: true
+  url: https://github.com/penborter/stretch

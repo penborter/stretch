@@ -8,8 +8,10 @@
 	  </ul>
   {% endif %}
 
-	<div class="post-publish">
-    Published on <strong>{{ page.date | date: "%B %-d, %Y" }}</strong>
-  </div>
+  {% if page.date %}
+    <div class="post-publish">
+      Published on <strong>{{ page.date | date: "%B %-d, %Y" }}</strong>
+    </div>
+  {% endif %}
 
 </div>

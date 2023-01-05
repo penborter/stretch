@@ -6,7 +6,9 @@ permalink: /
 
 # Stretch
 
-Welcome, stretch out and make yourself comfortable. You can find other parts of the template below:
+Welcome, stretch out and make yourself comfortable. This is a live example of *Stretch* theme for Jekyll websites. A simple, flexible Jekyll theme for personal websites and blogs. See the [Github page](https://github.com/penborter/stretch) for further information. 
+
+You can find other parts of the template below:
 
 <ul class="nav-about">
   <li><a href="/posts">Posts</a></li>
@@ -15,11 +17,7 @@ Welcome, stretch out and make yourself comfortable. You can find other parts of 
   <li><a href="/tags">Tags</a></li>
 </ul>
 
-This template is a work in progress, so check back for updates!
-The [Github page](/#) is here. 
-
-Created by **penborter**: 
+Created by [Ben Porter](https://www.penborter.com/): 
 
 - [Twitter](https://twitter.com/penborter)
-- [Instagram](https://www.instagram.com/penborter/)
 - [Github](https://github.com/penborter)

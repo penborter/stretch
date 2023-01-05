@@ -36,7 +36,7 @@ You can choose how to display your collections using the [`list.html`]() layout.
 
 ## Images
 
-The theme includes a `picture.html` file in the `_includes` folder for any photos you want to add. The usage is described in the includes file. 
+The theme includes a `picture.html` file in the `_includes` folder for any photos you want to add. The usage is described in the [includes file](https://github.com/penborter/stretch/blob/main/_includes/picture.html). 
 
 {% include picture.html
    file="stretching.png"
