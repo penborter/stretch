@@ -41,8 +41,8 @@ layout: default
       {% endif %}
                 {% if page.card == true %}
 
-                  <a class="list-link" href="{{ item.url }}">
-                    <li class="{{ item_class }} truncate">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                  <a class="{{ item_class }}" href="{{ item.url }}">
+                    <li class="truncate">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</li>
                   </a>
                 
                 {% else %}

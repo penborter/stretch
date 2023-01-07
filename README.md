@@ -32,10 +32,12 @@ Or install it yourself as:
 
 Two colour variables can be used to set all the colours for the theme:
 
-- `$fg` (foreground)
-- `$bg` (background) 
+- `$light`
+- `$dark`
 
-Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$fg`-coloured text on a `$bg`-coloured background.
+Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$light`-coloured text on a `$dark`-coloured background, and vice-versa.
+
+[Here](https://randoma11y.com/) is a suggested resource for two-colour
 
 ### List.html
 
@@ -48,7 +50,8 @@ You can choose how to display your collections using the [`list.html`](https://g
 ### Other Notes
 
 - An atom / RSS feed (through the jekyll-feed ) is available at `/feed.xml`.
-- 
+- `picture.html` can be used to provide more customisability to included images, including inserting them at full width.
+- Table of Contents included thanks to [jekyll-toc](https://github.com/allejo/jekyll-toc), made by Vladimir Jiminez. 
 
 ## Contributing
 

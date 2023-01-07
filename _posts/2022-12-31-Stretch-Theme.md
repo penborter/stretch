@@ -41,3 +41,16 @@ The theme includes a `picture.html` file in the `_includes` folder for any photo
 {% include picture.html
    file="stretching.png"
 %}
+
+## Other Formatting
+
+> Here is a blockquote.
+
+```python
+And here is a code block.
+```
+
+# Header 1
+## Header 2
+### Header 3
+More than three levels of headings is too many––go back up to level 3. 

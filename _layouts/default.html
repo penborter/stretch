@@ -4,7 +4,7 @@
 
   {% include head.html %}
 
-  <body {% if page.url contains "/photos" %} class="dark"{% endif %}>
+  <body>
 
     <main id="main" role="main">
 
@@ -14,6 +14,9 @@
 
     </main>
   </body>
+
+  {% include theme_switch_js.html %}
+  
 </html>
 
 
