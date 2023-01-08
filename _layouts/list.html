@@ -2,9 +2,10 @@
 layout: default
 ---
 
-{% assign item_class = "list-item" %}
 {% if page.card == true %}
   {% assign item_class = "card" %}
+{% else %}
+  {% assign item_class = "list-item" %}
 {% endif %}
 
 {% include navigation.html %}
@@ -33,7 +34,7 @@ layout: default
             </a>
 
             <div class="list-cat-container border-top top-u2">
-              <ul>
+              <ul {% if page.card == true %}class="card-collection"{% endif %}>
 
                 {% assign date = currentdate %}
         

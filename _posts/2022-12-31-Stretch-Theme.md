@@ -21,10 +21,18 @@ There are two key elements of the theme to highlight: the foreground and backgro
 
 Two colour variables can be used to set all the colours for the theme:
 
-- `$fg` (foreground)
-- `$bg` (background) 
+- `$dark`
+- `$light`
 
-Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$fg`-coloured text on a `$bg`-coloured background.
+Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$dark`-coloured text on a `$light`-coloured background. 
+
+### Theme Switch / Dark-Light mode
+
+The theme includes a JS-based theme switch button based on the two theme colours `$dark` and `$light`. 
+
+Basically the colours are swapped throughout when the button is clicked, with some minor exceptions that can be found in the [layout.scss], under the `[data-theme="dark"]` styles. The two colour system will still work if the theme switch button isn't included. 
+
+[Here](https://randoma11y.com/) is a suggested resource for generating two-colour pairs.
 
 ### List.html
 
