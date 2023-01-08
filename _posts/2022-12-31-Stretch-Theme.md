@@ -44,10 +44,20 @@ The theme includes a `picture.html` file in the `_includes` folder for any photo
 
 ## Other Formatting
 
+Other formatting examples are below.
+
 > Here is a blockquote.
 
+Inline code blocks are shown above, and below is a code block. 
+
 ```python
-And here is a code block.
+# And here is a code block, using Python.
+
+def doubleSize(fontSize):
+
+   return fontSize * 2
+
+h1FontSize = doubleSize(16)
 ```
 
 # Header 1

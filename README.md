@@ -1,6 +1,7 @@
 # Stretch
 
-A simple, flexible Jekyll theme for personal websites and blogs. Currently the theme contains no Javascript.
+A simple, flexible Jekyll theme for personal websites and blogs.
+CSS and HTML only, with a small (optional) JS file to implement a dark / light mode button. 
 
 See a live example [here](http://stretch.penborter.com).
 
@@ -37,7 +38,7 @@ Two colour variables can be used to set all the colours for the theme:
 
 Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$light`-coloured text on a `$dark`-coloured background, and vice-versa.
 
-[Here](https://randoma11y.com/) is a suggested resource for two-colour
+[Here](https://randoma11y.com/) is a suggested resource for generating two-colour pairs.
 
 ### List.html
 

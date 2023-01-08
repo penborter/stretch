@@ -6,30 +6,18 @@
 $content-width: 600px; // sets width of the main content column
 
 // 1.2 Main Colours
-$dark: #0e13d9; // dark colour
-$light: #d5d9c8; // light colour
+$dark: #222; // dark colour
+$light: #ddd; // light colour :white-cir
 
 
 // 2. Calculated Colours
-$dark_accent_1: lighten($dark,45%);
-$dark_accent_2: lighten($dark,15%);
+$dark_accent_1: lighten($dark,35%);
+$dark_accent_2: lighten($dark,8%);
 $light_accent_1: darken($light, 20%);
-$light_accent_2: darken($light, 8%);
+$light_accent_2: darken($light, 4%);
 
 $dark-transparent: scale-color($dark, $alpha: -50%);
 $light-transparent: scale-color($light, $alpha: -50%);
-
-//$dark_accent_extra: lighten($dark, 15%);
-//$dark_theme: (lightness($dark) > lightness($light));
-//$nav_color: $dark;
-
-//@if $dark_theme {
-//  $dark_accent: darken($dark, 25%);
-//  $dark_accent_extra: darken($dark, 8%);
-//  $light_accent: lighten($light, 10%);
-//  $nav_color: $dark_accent;
-//}
-
 
 // Converting sass variable colours to CSS variables for the dark / light theme switcher
 // The theme sets which of the two input colours is --fg (foreground) and which is --bg (background)
@@ -64,6 +52,15 @@ $light-transparent: scale-color($light, $alpha: -50%);
 
   .tag:hover, blockquote {
     filter: brightness(120%);
+  }
+
+  // Theme switch button
+  .dark-icon {
+    display: none;
+  }
+
+  .light-icon {
+    display: block;
   }
 }
 
@@ -101,7 +98,7 @@ $light-transparent: scale-color($light, $alpha: -50%);
 
 .card {
 
-  background: var(--bg-accent-1);
+  background: var(--fg-accent-2);
   border-radius: 10px;
   color: var(--bg);
 
@@ -284,6 +281,20 @@ blockquote {
   p {
     margin: 0;
   }
+}
+
+*:not(pre) > code {
+  border-radius: 5px;
+  padding: 0.1em 0.3em;
+  background-color: var(--bg-accent-2);
+}
+
+.highlight {
+  margin: 0;
+  padding: 1em;
+  border-radius: 10px;
+  line-height: 1em;
+  font-size: 0.95em;
 }
 
 .tag {
@@ -510,7 +521,20 @@ img {
 // Theme Switch
 
 button {
-  padding: 0.2em;
+  padding: 0.5em;
+  border-radius: 50px;
+  border: none;
   margin-left: 0.6em;
   margin-top: 1em;
+  cursor: pointer;
+  background: none;
+}
+
+.light-icon, .dark-icon {
+  font-size: 1.5em;
+  padding: 0;
+}
+
+.light-icon {
+  display: none;
 }
