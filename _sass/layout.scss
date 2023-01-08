@@ -6,8 +6,11 @@
 $content-width: 600px; // sets width of the main content column
 
 // 1.2 Main Colours
-$dark: #222; // dark colour
-$light: #ddd; // light colour :white-cir
+//$dark: #222; // dark colour
+//$light: #ddd; // light colour
+
+ $dark: #237a82;
+ $light: #fff3ec;
 
 
 // 2. Calculated Colours
@@ -113,6 +116,16 @@ $light-transparent: scale-color($light, $alpha: -50%);
   }
 }
 
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+
+  li {
+    display: inline-block;
+  }
+}
+
 .truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -138,10 +151,14 @@ body {
 
   a {
     color: var(--fg);
-    font-weight: 500;
+    //font-weight: 500;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--bg-accent-1);
+    text-decoration-thickness: 2px;
+
 
     &:not(nav a, .tag, .card):hover {
-      filter: brightness(150%);
+      color: var(--bg-accent-1);
     }
   }
 }
@@ -175,7 +192,7 @@ nav {
 
     &:hover {
       //background: var(--bg-accent-2); //unique colour
-      text-decoration: none !important;
+      text-decoration: none;
     }
   }
 
@@ -210,6 +227,7 @@ nav {
   a, a:visited {
     padding: 0;
     text-decoration: none;
+    font-weight: 500;
 
     &:hover {
       text-decoration: underline;
@@ -220,6 +238,8 @@ nav {
 
   .active {
     text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
   }
 }
 
@@ -258,18 +278,12 @@ main {
   }
 }
 
-.next-page {
-  text-align: right;
+.prev-page, .next-page {
+  text-decoration-color: var(--bg-accent-2);
 }
 
-.flexbox {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-
-  li {
-    display: inline-block;
-  }
+.next-page {
+  text-align: right;
 }
 
 blockquote {
@@ -315,7 +329,6 @@ div.highlighter-rouge {
 
   &:hover {
     filter: brightness(110%);
-    text-decoration: none !important;
   }
 }
 
@@ -347,7 +360,7 @@ footer {
 }
 
 .list-cat-link {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .list-cat-container {
@@ -364,7 +377,7 @@ footer {
   display: block;
 
   a {
-    text-decoration: none;
+    text-decoration-color: var(--bg-accent-2);
   }
 }
 
@@ -405,6 +418,7 @@ footer {
 .nav-about {
   font-size: 18px;
   font-weight: 500;
+  padding-left: 0;
 
   li {
     display: block;
@@ -466,6 +480,10 @@ img {
 
   a {
     text-decoration: none;
+
+    &:hover {
+      color: var(--fg) !important;
+    }
   }
 
   &>ul {
@@ -478,21 +496,23 @@ img {
 }
 
 // Responsiveness
+// Only one breakpoint @ 1000px from multi-column to single column
 
 @media screen and (max-width: 1000px) {
   body {
     font-size: 18px;
   }
 
+  main {
+    grid-template-rows: 70px 1fr;
+  }
+
   nav {
     grid-column: 2;
 
-    display: inline;
     margin: 0.5em 0;
     justify-self: left;
     top: 0;
-    width: 100%;
-    border-radius: 0 0 10px 10px;
     position: relative;
 
     .nav-main {
@@ -501,6 +521,10 @@ img {
 
     .nav-secondary {
       display: none;
+    }
+
+    button {
+      margin-left: 0;
     }
   }
 

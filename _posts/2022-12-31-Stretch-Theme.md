@@ -26,13 +26,13 @@ Two colour variables can be used to set all the colours for the theme:
 
 Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$dark`-coloured text on a `$light`-coloured background. 
 
+[Here](https://randoma11y.com/) is a suggested resource for generating two-colour pairs.
+
 ### Theme Switch / Dark-Light mode
 
 The theme includes a JS-based theme switch button based on the two theme colours `$dark` and `$light`. 
 
 Basically the colours are swapped throughout when the button is clicked, with some minor exceptions that can be found in the [layout.scss], under the `[data-theme="dark"]` styles. The two colour system will still work if the theme switch button isn't included. 
-
-[Here](https://randoma11y.com/) is a suggested resource for generating two-colour pairs.
 
 ### List.html
 
@@ -44,7 +44,7 @@ You can choose how to display your collections using the [`list.html`]() layout.
 
 ## Images
 
-The theme includes a `picture.html` file in the `_includes` folder for any photos you want to add. The usage is described in the [includes file](https://github.com/penborter/stretch/blob/main/_includes/picture.html). 
+The theme includes a `picture.html` file in the `_includes` folder for any photos you want to add. The usage is described in the [includes file on Github](https://github.com/penborter/stretch/blob/main/_includes/picture.html). 
 
 {% include picture.html
    file="stretching.png"

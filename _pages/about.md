@@ -8,7 +8,9 @@ permalink: /
 
 Welcome, stretch out and make yourself comfortable. This is a live example of *Stretch* theme for Jekyll websites. A simple, flexible Jekyll theme for personal websites and blogs. See the [Github page](https://github.com/penborter/stretch) for further information. 
 
-Dark / light themes: {% include theme_switch.html %}
+Dark / light theme switch --> {% include theme_switch.html %}
+
+Refer to the [README.md section on colour](https://github.com/penborter/stretch#two-colour-system) for how the two-colour theme works.
 
 You can find other parts of the template below:
 

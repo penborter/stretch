@@ -29,16 +29,23 @@ Or install it yourself as:
 
 ## Usage
 
-### Two-colour system
+### Two-colour System
 
 Two colour variables can be used to set all the colours for the theme:
 
-- `$light`
 - `$dark`
+- `$light`
 
-Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$light`-coloured text on a `$dark`-coloured background, and vice-versa.
+Variations of these two colours are then derived and used throughout the site. It is recommended that you choose a pair of colours with a high contrast; at the very least you'll want to be able to read the `$dark`-coloured text on a `$light`-coloured background. 
 
 [Here](https://randoma11y.com/) is a suggested resource for generating two-colour pairs.
+
+### Theme Switch / Dark-Light mode
+
+The theme includes a JS-based theme switch button based on the two theme colours `$dark` and `$light`. 
+
+Basically the colours are swapped throughout when the button is clicked, with some minor exceptions that can be found in the [layout.scss], under the `[data-theme="dark"]` styles. The two colour system will still work if the theme switch button isn't included. 
+
 
 ### List.html
 
