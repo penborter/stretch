@@ -6,12 +6,11 @@
 $content-width: 600px; // sets width of the main content column
 
 // 1.2 Main Colours
-//$dark: #222; // dark colour
-//$light: #ddd; // light colour
+$dark: #222; // dark colour
+$light: #ddd; // light colour
 
- $dark: #237a82;
- $light: #fff3ec;
-
+//$dark: #237a82;
+//$light: #fff3ec;
 
 // 2. Calculated Colours
 $dark_accent_1: lighten($dark,35%);
