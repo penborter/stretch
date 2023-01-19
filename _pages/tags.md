@@ -34,7 +34,7 @@ title: Tags
   {% if post.tags contains t %}
 
   <div class="list-item truncate">
-      <a class="list-link truncate" href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a> <time class="tag-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+      <a class="list-link truncate" href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>–<time class="tag-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
   </div>
   {% endif %}
 {% endfor %}
