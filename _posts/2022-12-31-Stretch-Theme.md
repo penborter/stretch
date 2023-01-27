@@ -32,11 +32,11 @@ Variations of these two colours are then derived and used throughout the site. I
 
 The theme includes a JS-based theme switch button based on the two theme colours `$dark` and `$light`. 
 
-Basically the colours are swapped throughout when the button is clicked, with some minor exceptions that can be found in the [layout.scss], under the `[data-theme="dark"]` styles. The two colour system will still work if the theme switch button isn't included. 
+Basically the colours are swapped throughout when the button is clicked, with some minor exceptions that can be found in [layout.scss](https://github.com/penborter/stretch-theme/blob/main/_sass/layout.scss), under the `[data-theme="dark"]` styles. The two colour system will still work if the theme switch button isn't included. 
 
 ### List.html
 
-You can choose how to display your collections using the [`list.html`]() layout. This layout has three versions, depending on the front matter you include in your page. See the template's [books](/books), [posts](/posts), and [projects](/projects) pages for examples of the three layouts.
+You can choose how to display your collections using the [`list.html`](https://github.com/penborter/stretch-theme/blob/main/_layouts/list.html) layout. This layout has three versions, depending on the front matter you include in your page. See the template's [books](/books), [posts](/posts), and [projects](/projects) pages for examples of the three layouts.
 
 1. A plain list of collection items - set `layout: list` with no other changes required. *E.g.: [Books](/books)*
 2. A list of collection items separated by year - `layout: list` and `by_date: true` in the front matter. *E.g.: [Posts](/posts)*

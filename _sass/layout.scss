@@ -3,11 +3,13 @@
 
 // 1. Input Variables
 // 1.1 Layout
-$content-width: 600px; // sets width of the main content column
+$content-width: 600px; // width of main content column
+$sidebar-width: 220px; // width of sidebar
+$sidebar-margin: 3.5rem; // the gap between the sidebar content and main content
 
 // 1.2 Main Colours
 $dark: #222; // dark colour
-$light: #eee; // light colour
+$light: #f3f3f3; // light colour
 
 //$dark: #237a82;
 //$light: #fff3ec;
@@ -37,6 +39,8 @@ $light-transparent: scale-color($light, $alpha: -50%);
 
   --nav-color: #{$dark_accent_1};
   --bg-transparent: #{$light-transparent};
+
+  --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="dark"] {
@@ -51,6 +55,8 @@ $light-transparent: scale-color($light, $alpha: -50%);
 
   --nav-color: #{$dark};
   --bg-transparent: #{$dark-transparent};
+
+  --shadow-color: rgba(0, 0, 0, 0.15);
 
   .tag:hover, blockquote {
     filter: brightness(120%);
@@ -165,6 +171,9 @@ body {
 article {
   grid-column: 2;
   padding-bottom: 7em;
+  border-left: 1px solid var(--bg-accent-1);
+  padding-left: $sidebar-margin;
+  box-shadow: inset 8px 0px 6px -6px var(--shadow-color);
 }
 
 nav {
@@ -174,11 +183,10 @@ nav {
   grid-column: 1;
   
   block-size: fit-content;
-  margin-top: 4.3em;
-  margin-right: calc(min(6em, 5vw));
+  margin: 4rem auto;
   
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
+  //backdrop-filter: blur(5px);
+  //border-radius: 10px;
   font-size: 18px;
 
   * {
@@ -246,9 +254,10 @@ nav {
 
 main {
   display: grid;
-  grid-template-columns: minmax(1em,1fr) 
-                         minmax(0, #{$content-width}) 
-                         minmax(1em,1fr);
+  grid-template-columns: $sidebar-width
+                         600px
+                         minmax(calc(1000px - #{$content-width} - #{$sidebar-width}), 500px)
+                         1fr;
   min-height: 100vh;
   position: relative;
 }
@@ -291,8 +300,7 @@ blockquote {
   background-color: var(--bg);
   margin: 0;
   padding: 1em;
-  border: 1px solid var(--bg-accent-2);
-  border-radius: 10px;
+  border: 1px solid var(--bg-accent-1);
 
   font-size: 1.05em;
 
@@ -319,7 +327,7 @@ blockquote {
 
 div.highlighter-rouge {
   border: 1px solid var(--bg-accent-2);
-  border-radius: 10px;
+  //border-radius: 10px;
 }
 
 .tag {
@@ -337,7 +345,7 @@ div.highlighter-rouge {
 footer {
   font-size: 14px;
   color: var(--bg-accent-1);
-  margin: 2em 0;
+  margin: 2em 0 2em $sidebar-margin;
   grid-column: 2;
   position: absolute;
   bottom: 0;
@@ -354,7 +362,7 @@ footer {
 
 .list-cat {
   position: relative;
-  left: calc(0.6em + #{$content-width});
+  left: calc(#{$content-width} - 50px);
 
   font-size: 20px;
   color: var(--bg-accent-1);
@@ -439,29 +447,36 @@ figure {
 
 img {
   width: 100%;
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.1);
 }
 
 .pic-wide {
-  width: calc(50vw + #{$content-width} / 2 - 6em);
+  width: 130%;
+  margin: 2em 0 2em -15%;
 }
 
 // Table of Contents
 
 .toc {
   position: sticky;
-  top: 4.25em;
+  top: 4em;
   grid-column: 3;
   height: fit-content;
   width: fit-content;
-  margin-left: calc(min(2em, 2vw));
-  margin-top: 11.2rem;
+  margin: auto;
+  margin-top: 11rem;
   backdrop-filter: blur(5px);
   padding: 0.8em;
   border-radius: 10px;
   max-width: 200px;
+  font-weight: 600;
 
   background: var(--bg-transparent);
-  color: var(--bg-accent-1);
+  //color: var(--bg-accent-1);
+
+  &:hover * {
+    color: var(--bg-accent-1) !important;
+  }
 
   * {
     padding: 0;
@@ -469,7 +484,7 @@ img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--bg-accent-1);
+    color: var(--bg-accent-2);
   }
 
   h2 {
@@ -478,6 +493,7 @@ img {
 
   li {
     display: block;
+    margin-bottom: 0.3em;
   }
 
   a {
@@ -492,7 +508,10 @@ img {
     margin-bottom: 1em;
 
     ul {
-      padding-left: 1em;
+      //padding-left: 1em;
+      font-size: 0.8em;
+      padding: 0.4em 0 0 0.4em;
+      font-weight: 600;
     }
   }
 }
@@ -507,17 +526,29 @@ img {
 
   main {
     grid-template-rows: 85px 1fr;
+    grid-template-columns: 1fr;
+
+    * {
+      grid-column: 1;
+    }
+  }
+
+  article {
+    box-shadow: none;
+    border: none;
+
+    padding: 2em;
   }
 
   nav {
-    grid-column: 2;
-
     margin: 0.5em 0;
     justify-self: left;
     top: 0;
     position: relative;
 
     font-size: 16px;
+
+    padding: 2em;
 
     .nav-main {
       display: inline-flex;
