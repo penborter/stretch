@@ -44,7 +44,7 @@ You can choose how to display your collections using the [`list.html`](https://g
 
 ## Images
 
-The theme includes a `picture.html` file in the `_includes` folder for any photos you want to add. The usage is described in the [includes file on Github](https://github.com/penborter/stretch/blob/main/_includes/picture.html). 
+The theme includes a `picture.html` file in the `_includes` folder for any photos you want to add. The usage is described in the [includes file on Github](https://github.com/penborter/stretch/blob/main/_includes/picture.html). Images added this way can come in two sizes: normal (default), and wide which overflows the sidebar by default. Wide images' overflow amount is set by the `$pic-wide` variable in [`layout.scss`](https://github.com/penborter/stretch-theme/blob/main/_sass/layout.scss).
 
 {% include picture.html
    file="stretching.png"
@@ -56,7 +56,7 @@ Other formatting examples are below, starting with a blockquote from the *Kama S
 
 > If variety is sought in all the arts and amusements, such as archery and others, how much more should it be sought after in the art of love.
 
-You can also use the `quote.html` includes file, which also takes the author, title and even link to all be included and formatted within the blockquote.
+You can also use the [`quote.html`](https://github.com/penborter/stretch-theme/blob/main/_includes/quote.html) includes file, which also takes the author, title and even link to all be included and formatted within the blockquote.
 
 {% include quote.html
 content="We need more variety on the web. We need more people creating their own spaces on the web. Spaces that they own, spaces that they control. Spaces where they can share their creativity, personality, voice, experience, knowledge, skills. So if you feel that the web is getting boring, commodified and homogeneous, if you feel that the web is controlled by a handful of large corporations, this is one way that you can make a bit of a difference."
