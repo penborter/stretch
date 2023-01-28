@@ -48,6 +48,7 @@ The theme includes a `picture.html` file in the `_includes` folder for any photo
 
 {% include picture.html
    file="stretching.png"
+   class="wide"
 %}
 
 ## Other Formatting
