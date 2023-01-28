@@ -52,9 +52,18 @@ The theme includes a `picture.html` file in the `_includes` folder for any photo
 
 ## Other Formatting
 
-Other formatting examples are below.
+Other formatting examples are below, starting with a blockquote from the *Kama Sutra*.
 
-> Here is a blockquote.
+> If variety is sought in all the arts and amusements, such as archery and others, how much more should it be sought after in the art of love.
+
+You can also use the `quote.html` includes file, which also takes the author, title and even link to all be included and formatted within the blockquote.
+
+{% include quote.html
+content="We need more variety on the web. We need more people creating their own spaces on the web. Spaces that they own, spaces that they control. Spaces where they can share their creativity, personality, voice, experience, knowledge, skills. So if you feel that the web is getting boring, commodified and homogeneous, if you feel that the web is controlled by a handful of large corporations, this is one way that you can make a bit of a difference."
+
+author="Marko Saric" title="How You Can Help Keep Blogging Alive"
+link="https://markosaric.com/keep-blogging-alive/#more-28884"
+%}
 
 Inline code blocks are shown above, and below is a code block. 
 
