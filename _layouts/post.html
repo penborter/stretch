@@ -14,8 +14,10 @@ layout: default
 
 </article>
 
+{% include footer.html %}
+
 {% if page.toc == true %}
-  <div class="toc">
+  <div class="toc narrow-remove">
     {% include toc.html html=content h_min=2 %}
     <a href="#"> ^ Return to top</a>
   </div>
