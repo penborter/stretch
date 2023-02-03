@@ -17,6 +17,7 @@ You can find other parts of the template below:
 <ul class="nav-about">
   <li><a href="/posts">Posts</a></li>
   <li><a href="/projects">Projects</a></li>
+  <li><a href="/photos">Photos</a></li>
   <li><a href="/books">Books</a></li>
   <li><a href="/tags">Tags</a></li>
 </ul>

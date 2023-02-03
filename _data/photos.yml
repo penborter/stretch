@@ -1,0 +1,15 @@
+nz:
+  description: New Zealand
+  blurb: "Roadtrip around New Zealand's South Island"
+  imagefolder: /assets/nz
+  thumb: nz-thumb.jpeg
+  images:
+  - name: nz-1.jpg
+    thumb: nz-1.jpg
+    text: Mountains off Lindis Pass
+  - name: nz-2.jpg
+    thumb: nz-2.jpg
+    text: Floating near Mt Pisa
+  - name: nz-3.jpg
+    thumb: nz-3.jpg
+    text: Dunedin cycle club

@@ -41,19 +41,26 @@ defaults:
     scope:
       path: ""
     values:
-      image: "/assets/default-social-image.png" # Default image for sharing
+      main_columns: col-3 # Default to triple column layout
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: post # Set the default layout for posts
+      layout: post
   -
     scope:
       path: ""
       type: "pages"
     values:
-      layout: page # Set the default layout for pages
+      layout: page
+  -
+    scope:
+      path: ""
+      type: "photos"
+    values:
+      layout: photo
+      main_columns: col-2 # Default to double column layout for photos pages
 
 encoding: utf-8 
 lang: en-GB
@@ -63,13 +70,15 @@ collections:
   pages:
     output: true
     permalink: /:name
+  photos:
+    output: true
+    permalink: /photos/:slug
   posts:
     output: true
     permalink: /posts/:slug
   projects:
     output: true
     permalink: /projects/:slug
-    label: "Projects"
   reviews:
     output: true
     permalink: /books/:slug
@@ -80,6 +89,8 @@ nav_header:
   url: /posts
 - title: Projects
   url: /projects
+- title: Photos
+  url: /photos
 - title: Books
   url: /books
 
