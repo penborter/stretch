@@ -572,6 +572,56 @@ img {
   }
 }
 
+// Gallery Page
+
+.horizontal-gallery-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: var(--photo-padding) 0;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+}
+
+  .image-wrapper {
+    display: inline-block;
+    height: 100%;
+    margin: 0 4px;
+    background: var(--bg-accent-2);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.img-gallery {
+  height: 100%;
+  width: auto;
+}
+
+.gallery-meta {
+  width: 500px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  vertical-align: top;
+  white-space: normal;
+  padding: calc(4.5rem - 10px) 3rem 0 3.5rem;
+  height: 100%;
+  
+
+  h1 {
+      margin: 0 0 4.5rem 0;
+  }
+
+  footer {
+    position: relative;
+    margin: 1.5em 0;
+  }
+}
+
 // Responsiveness
 // Main breakpoint @ 1000px from multi-column to single column
 // Comfortable until about 450px wide, then large nav icons disappear
@@ -693,8 +743,46 @@ img {
     width: 100%;
     margin-left: 0;
   }
+
+  .col-2 {
+    height: auto;
+  }
+
+  .horizontal-gallery-wrapper {
+    overflow: auto;
+    white-space: normal;
+    padding: 0 var(--narrow-padding);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+
+    .gallery-meta {
+      display: block;
+      padding: 3rem 0 0 0;
+      width: auto;
+      height: auto;
+
+      footer {
+        display: none;
+      }
+    }
+
+    .image-wrapper {
+      display: contents;
+      height: auto;
+    }
+
+    .img-gallery {
+      height: auto;
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+  }
 }
 
+// Removing nav elements at really narrow widths
 @media screen and (max-width: 450px) {
   nav .card {
     display: none;
@@ -718,6 +806,10 @@ button {
   background: none;
 }
 
+p button {
+  margin: 0;
+}
+
 .light-icon, .dark-icon {
   font-size: 1.5em;
   padding: 0;
@@ -728,50 +820,3 @@ button {
 }
 
 
-// Gallery Page
-
-.horizontal-gallery-wrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  padding: var(--photo-padding) 0;
-  -webkit-overflow-scrolling: touch;
-
-  &::-webkit-scrollbar {
-    display: none;
-}
-
-  .image-wrapper {
-    display: inline-block;
-    height: 100%;
-    margin: 0 4px;
-    background: var(--bg-accent-2);
-    border-radius: 3px;
-    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.05);
-  }
-}
-
-.img-gallery {
-  height: 100%;
-  width: auto;
-}
-
-.gallery-meta {
-  width: 500px;
-  display: inline-block;
-  vertical-align: top;
-  white-space: normal;
-  padding: calc(4.5rem - 10px) 3rem 0 3.5rem;
-
-  h1 {
-      margin: 0 0 4.5rem 0;
-  }
-
-  .photo-footer {
-    position: relative;
-    top: calc(83vh - 3em - 90px);
-    color: #555;
-    font-size: 14px;
-
-  }
-}
