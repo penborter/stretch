@@ -32,7 +32,7 @@ Variations of these two colours are then derived and used throughout the site. I
 
 The theme includes a JS-based theme switch button based on the two theme colours `$dark` and `$light`. 
 
-Basically the colours are swapped throughout when the button is clicked, with some minor exceptions that can be found in [layout.scss](https://github.com/penborter/stretch-theme/blob/main/_sass/layout.scss), under the `[data-theme="dark"]` styles. The two colour system will still work if the theme switch button isn't included. 
+Basically, the colours are swapped throughout when the button is clicked, with some minor exceptions that can be found in [layout.scss](https://github.com/penborter/stretch-theme/blob/main/_sass/layout.scss), under the `[data-theme="dark"]` styles. The two colour system will still work if the theme switch button isn't included. 
 
 ### List.html
 

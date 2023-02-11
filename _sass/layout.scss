@@ -3,8 +3,8 @@
 
 // 1. Input Variables
 // 1.1 Layout
-$content-width: 600px; // width of main content column
-$sidebar-width: 230px; // width of sidebar
+$content-width: 650px; // width of main content column
+$sidebar-width: 220px; // width of sidebar
 $sidebar-margin: 3.5rem; // the gap between the sidebar content and main content
 
 $pic-wide: 1.3; // overflow amount for wide pictures
@@ -166,7 +166,6 @@ body {
 
   a {
     color: var(--fg);
-    //font-weight: 500;
     text-underline-offset: 2px;
     text-decoration-color: var(--bg-accent-1);
     text-decoration-thickness: 2px;
@@ -256,22 +255,21 @@ nav {
     text-underline-offset: 2px;
     text-decoration-thickness: 2px;
   }
+
+  .home-icon {
+    display: none;
+    margin-right: 1em;
+    font-size: 24px;
+  }
 }
 
 // Main Grid Layout
 
 main {
   display: grid;
-  //grid-template-columns: $sidebar-width
-  //                       600px
-  //                       minmax(calc(1000px - #{$content-width} - #{$sidebar-width}), 500px)
-  //                       1fr;
-  //min-height: 100vh;
-  //position: relative;
 }
 
 .col-2 {
-  //display: grid;
   grid-template-columns: $sidebar-width 
                          1fr;
   height: 100%;
@@ -279,9 +277,9 @@ main {
 
 .col-3 {
   grid-template-columns: $sidebar-width
-                         600px
-                         minmax(calc(1000px - #{$content-width} - #{$sidebar-width}), 500px)
-                         1fr;
+                          $content-width
+                          minmax(calc(1000px - #{$content-width} - #{$sidebar-width}), 500px)
+                          1fr;
   min-height: 100vh;
   position: relative;
 }
@@ -291,6 +289,12 @@ li::marker {
 }
 
 // Post Footer Elements
+
+.footnotes {
+  border-top: 1px solid var(--bg-accent-1);
+  border-bottom: 1px solid var(--bg-accent-1);
+  font-size: 0.9em;
+}
 
 .post-footer, .post-nav {
   display: flex;
@@ -305,6 +309,11 @@ li::marker {
 
 .post-nav {
   margin-top: 3em;
+}
+
+div + .post-nav {
+  margin-top: 0;
+  padding-top: 0.9em;
 }
 
 .post-nav-arrow {
@@ -329,14 +338,12 @@ li::marker {
 }
 
 blockquote {
-  //filter: brightness(110%);
   background: var(--bg-accent-2);
   margin: 1.2em 0;
   padding: 1em 1em 1.1em 1em;
 
   border-top: 1px solid var(--bg-accent-1);
-  box-shadow: inset 0px 8px 6px -6px var(--shadow-color);
-  //border-radius: 3px;
+  box-shadow: 0px -2px 5px -2px var(--shadow-color);
 
   font-size: 0.9em;
   line-height: 1.5;
@@ -361,8 +368,6 @@ blockquote {
 .highlight {
   margin: 0;
   padding: 1em;
-
-  //border: 1px solid var(--bg-accent-1);
   border-radius: 3px;
 
   line-height: 1em;
@@ -487,11 +492,8 @@ figure {
 }
 
 figcaption {
-  //color: var(--fg-accent-1);
   font-size: 0.85em;
   margin-top: 1em;
-  padding: 1em;
-  border-top: 1px solid var(--bg-accent-1);
 }
 
 img {
@@ -528,7 +530,6 @@ img {
   border: 1px solid var(--bg);
   border-radius: 3px;
   background: var(--bg-transparent);
-  //color: var(--bg-accent-1);
 
   &:hover * {
     color: var(--bg-accent-1) !important;
@@ -564,7 +565,6 @@ img {
     margin-bottom: 1em;
 
     ul {
-      //padding-left: 1em;
       font-size: 0.8em;
       padding: 0.4em 0 0 0.4em;
       font-weight: 600;
@@ -622,11 +622,16 @@ img {
   }
 }
 
+mark {
+  background: var(--fg-accent-1);
+  color: var(--bg);
+}
+
 // Responsiveness
-// Main breakpoint @ 1000px from multi-column to single column
+// Main breakpoint @ 1050px from multi-column to single column
 // Comfortable until about 450px wide, then large nav icons disappear
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   body {
     font-size: 18px;
   }
@@ -651,12 +656,7 @@ img {
 
   nav {
     margin: auto 0;
-    //justify-self: left;
-    //top: 0;
-    //position: relative;
-
     font-size: 16px;
-
     padding: 1em var(--narrow-padding);
 
     .nav-main {
@@ -784,8 +784,22 @@ img {
 
 // Removing nav elements at really narrow widths
 @media screen and (max-width: 450px) {
+  body {
+    font-size: 16px;
+  }
+
   nav .card {
-    display: none;
+    background: none;
+    padding: 0;
+    display: inline;
+    box-shadow: none;
+
+    .home-icon {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 26px;
+    }
   }
 
   .light-icon, .dark-icon {
@@ -818,5 +832,3 @@ p button {
 .light-icon {
   display: none;
 }
-
-
