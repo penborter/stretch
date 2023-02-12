@@ -512,6 +512,33 @@ img {
   margin-left: calc(50em * (1 - #{$caption-wide}) / 2);
 }
 
+// Tables
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid;
+
+  thead tr {
+    background: var(--fg);
+    color: var(--bg);
+  }
+}
+
+tr {
+  height: 35px;
+  background: var(--bg-accent-2);
+
+  &:hover:not(thead tr) {
+    filter: brightness(110%);
+  }
+}
+
+tr:nth-child(even) {
+  background: var(--bg);
+}
+
 // Table of Contents
 
 .toc {
