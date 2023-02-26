@@ -124,10 +124,13 @@ $light-transparent: scale-color($light, $alpha: -50%);
   border-radius: 3px;
   color: var(--bg);
 
-  box-shadow: 0px 4px 6px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 2px var(--shadow-color), 
+               0 4px 4px var(--shadow-color);
+
+  transition: 0.2s ease;
 
   &:hover {
-    filter: brightness(120%);
+    transform: scale(1.02);
   }
 }
 
@@ -163,6 +166,8 @@ body {
   background-color: var(--bg);
 
   margin: 0;
+
+  transition: 0.2s ease;
 
   a {
     color: var(--fg);
@@ -618,7 +623,32 @@ tr:nth-child(even) {
     margin: 0 4px;
     background: var(--bg-accent-2);
     border-radius: 3px;
-    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 2px var(--shadow-color), 
+                0 4px 4px var(--shadow-color), 
+                0 8px 8px var(--shadow-color);
+
+    a {
+      position: relative;
+    }
+
+    .image-caption {
+      position: absolute;
+      left: 2em;
+      bottom: 1.5em;
+      display: none;
+
+      backdrop-filter: blur(5px);
+      color: #eee;
+      background: rgba(0, 0, 0, 0.5);
+      //border-radius: 2px;
+      padding: 0.2em 0.3em;
+    }
+
+    &:hover {
+      .image-caption {
+        display: block;
+      }
+    }
   }
 }
 

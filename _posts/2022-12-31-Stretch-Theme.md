@@ -42,6 +42,8 @@ You can choose how to display your collections using the [`list.html`](https://g
 2. A list of collection items separated by year - `layout: list` and `by_date: true` in the front matter. *E.g.: [Posts](/posts)*
 3. A list of collection items as cards - set `layout: list` and `card: true` in the front matter. *E.g.: [Projects](/projects)*
 
+For collections as cards, you can also set a thumbnail picture to use for each card. For that card's collection item, set `thumb` in the front matter to the desired url. Check out the sample gallery and `example.md` for an example.
+
 ## Images
 
 The theme includes a `picture.html` file in the `_includes` folder for any photos you want to add. The usage is described in the [includes file on Github](https://github.com/penborter/stretch/blob/main/_includes/picture.html). Images added this way can come in two sizes: normal (default), and wide which overflows the sidebar by default. Wide images' overflow amount is set by the `$pic-wide` variable in [`layout.scss`](https://github.com/penborter/stretch-theme/blob/main/_sass/layout.scss).
