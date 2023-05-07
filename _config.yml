@@ -1,6 +1,6 @@
 # 1. Site Details
 site: Stretch
-url: https://ben.report
+url: https://stretch.ben.report
 title: Stretch theme
 description: "A simple, flexible Jekyll theme."
 
@@ -34,7 +34,7 @@ markdown: kramdown
 # 5. Jekyll settings
 sass:
   style: compressed
-timezone: Australia/Sydney #AEST FTW
+timezone: Australia/Sydney
 
 defaults:
   -
@@ -97,7 +97,5 @@ nav_header:
 nav_secondary:
 - title: Tags
   url: /tags
-- title: Twitter
-  url: https://twitter.com/penborter
 - title: Github
   url: https://github.com/penborter/stretch

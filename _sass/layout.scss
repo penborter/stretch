@@ -223,6 +223,7 @@ nav {
 
     &:hover {
       text-decoration: none;
+      background: var(--fg-accent-1);
     }
   }
 
@@ -357,10 +358,12 @@ blockquote {
   background: var(--bg-accent-2);
   margin: 1.2em 0;
   padding: 1em 1em 1.1em 1em;
+  border-radius: 3px;
 
-  border-top: 1px solid var(--bg-accent-1);
+  //border-top: 1px solid var(--bg-accent-1);
   box-shadow: 0 2px 2px var(--shadow-color), 
-               0 4px 4px var(--shadow-color);
+               0 4px 4px var(--shadow-color),
+               0 8px 8px var(--shadow-color);
 
   font-size: 0.9em;
   line-height: 1.5;
@@ -380,6 +383,12 @@ blockquote {
   border-radius: 5px;
   padding: 0.1em 0.3em;
   background-color: var(--bg-accent-2);
+}
+
+.highlighter-rouge {
+  margin-bottom: 2em;
+  border-radius: 3px;
+  border: 1px solid transparent;
 }
 
 .highlight {
@@ -559,37 +568,37 @@ tr:nth-child(even) {
 // Table of Contents
 
 .toc {
-  position: sticky;
-  top: 4em;
-  grid-column: 3;
-  height: fit-content;
-  width: fit-content;
-  margin: auto;
-  margin-top: 11rem;
-  backdrop-filter: blur(5px);
-  padding: 0.8em;
-  max-width: 200px;
-  font-weight: 600;
+  position: fixed;
+  bottom: 3em;
+  right: 4em;
+  max-width: calc(100vw - #{$sidebar-width} - #{$content-width}); // leave a buffer if some headings are too long
+
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.7;
+  text-align: right;
   
-  border: 1px solid var(--bg);
+  padding: 0.5em;
   border-radius: 3px;
-  background: var(--bg-transparent);
+
+  &:hover {
+    background: var(--bg-transparent);
+    backdrop-filter: blur(5px);
+  }
 
   &:hover * {
-    color: var(--bg-accent-1) !important;
+    color: var(--fg-accent-1) !important;
   }
 
   * {
     padding: 0;
     margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--bg-accent-2);
+    color: transparent;
   }
 
-  h2 {
-    margin-bottom: 0.5em;
+  .toc-return {
+    color: var(--bg-accent-1);
   }
 
   li {
@@ -609,9 +618,11 @@ tr:nth-child(even) {
     margin-bottom: 1em;
 
     ul {
+      font-weight: 400;
       font-size: 0.8em;
-      padding: 0.4em 0 0 0.4em;
-      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 0.3em;
+      margin-bottom: 0.8em;
     }
   }
 }
